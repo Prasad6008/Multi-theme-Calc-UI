@@ -1,0 +1,235 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(222, 26%, 31%) ;
+    font-family: Regular;
+}
+
+@font-face {
+    font-family: Regular;
+    src: url('LeagueSpartan-Regular.ttf');
+}
+
+.container
+{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header
+{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.title 
+{
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
+.input_div
+{
+    flex: 2;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input_div input 
+{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 50px;
+    padding:25px 25px;
+    font-weight: bolder;
+    text-align: right;
+    border-radius: 10px;
+    outline: none !important;
+    border: none !important;
+    background-color:hsl(224, 36%, 15%) ;
+    color: white;
+    font-family: Regular;
+}
+
+.buttons_div
+{
+    flex: 5;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 10px;
+}
+
+.buttons_div div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+
+}
+
+.buttons_div div button 
+{
+    font-family: Regular;
+    padding:10px ;
+    border-radius: 10px;
+    font-size: 35px;
+    font-weight: 700;
+    border: none !important;
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: inset 0px -4px 1px rgba(0, 0, 0, 0.3); /* cleaner bottom inner shadow */
+}
+
+.buttons_div div button:hover
+{
+    background-color:white;
+}
+
+
+.reset
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.buttons_div div .del 
+{
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    font-size: 25px;
+}
+
+.buttons_div div .del:hover , .buttons_div div #reset:hover 
+{
+    background-color:hsl(225, 44%, 73%) ;
+}
+
+.buttons_div div #reset
+{
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    font-size: 25px;
+}
+
+.buttons_div div #equal
+{
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+}
+
+.buttons_div div #equal:hover
+{
+    background-color: hsl(6, 65%, 66%);
+    color: white;
+}
+
+.title2
+{
+    display: flex;
+    align-items: center;
+}
+
+
+.equal
+{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+/* Three Way Toggle Buton */
+
+.theme-switch-container
+{
+    display: flex;
+    align-items:flex-end;
+    gap: 1rem;
+}
+
+.switch 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label 
+{
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.numbers 
+{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 60px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.toggle-track 
+{
+    width: 75px;
+    height: 24px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    border: none !important;
+}
+
+.toggle-circle 
+{
+    width: 15px;
+    height: 15px;
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    transition: left 0.3s;
+    border: none !important;
+    margin-left: 3px;
+  }
+
+.buttons_div button
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media  (max-width:740px)
+{
+    .container
+    {
+        width: 90vw;
+        height: 80vh;
+    }
+    
+}
